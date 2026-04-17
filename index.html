@@ -5,129 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG</title>
     <style>
-        /* 1. CẤU HÌNH CHUNG */
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: url('1.jpg') no-repeat center center fixed;
             background-size: cover;
-            color: #1e293b;
-            scroll-behavior: smooth;
-            line-height: 1.6;
+            color: #0f172a;
         }
 
-        /* 2. HEADER - ĐÃ CHỈNH SỬA ĐỂ KHÔNG BỊ CHE */
+        /* Đã sửa lỗi cú pháp bị trùng lặp ở phần header */
         header {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('0.png') no-repeat center center;
-            background-size: cover; /* Đảm bảo ảnh phủ hết không gian mà không bị méo */
+            background: url('0.png') no-repeat center top;
+            background-attachment: fixed; 
+            background-size: cover; 
+            color: #0f172a;
             text-align: center;
-            padding: 100px 20px;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 70px 20px;
         }
 
         header h1 {
-            font-size: 48px;
-            color: #ffff00;
-            margin-bottom: 20px;
-            background-color: rgba(220, 38, 38, 0.9);
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 12px;
-            text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 44px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
 
         header p {
-            font-size: 32px;
-            color: #ff0000;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            display: inline-block;
-            padding: 10px 25px;
-            text-shadow: 1px 1px 0 #ffff00, -1px -1px 0 #ffff00;
+            font-size: 19px;
         }
 
-        /* 3. MENU */
         nav {
             background: #0f172a;
             display: flex;
             justify-content: center;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            flex-wrap: wrap; /* Cho phép menu rớt dòng trên điện thoại */
             gap: 30px;
+            padding: 14px 0;
         }
 
         nav a {
             color: #f8fafc;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
         }
 
-        nav a:hover { color: #fb923c; }
+        nav a:hover {
+            color: #f97316;
+        }
 
-        /* 4. CONTAINER NỘI DUNG */
         .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.96);
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            max-width: 1150px;
+            margin: auto;
+            padding: 40px 25px;
+            background: linear-gradient(180deg, #ffffff, #f1f5f9);
+            border-radius: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
         }
 
-        section { margin-bottom: 60px; }
+        section {
+            margin-bottom: 60px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
         section h2 {
-            font-size: 34px;
             color: #0f172a;
-            border-left: 10px solid #f97316;
-            padding-left: 20px;
-            margin-bottom: 30px;
+            border-left: 6px solid #f97316;
+            padding-left: 12px;
         }
 
-        p, li {
-            font-size: 21px; /* Trả lại kích thước chuẩn cho máy tính */
-            margin-bottom: 15px;
+        .intro {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            align-items: center;
         }
 
-        /* 5. GRID CARDS */
+        .intro img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+        }
+
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 26px;
         }
 
         .card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
             text-align: center;
-            border-top: 6px solid #0ea5e9;
+            border-top: 5px solid #0ea5e9;
+            color: #0f172a;
         }
 
         .card img {
             width: 100%;
-            height: 220px;
+            height: 170px;
             object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
 
-        /* 6. HERO SLIDER */
+        .card h3 {
+            color: #0f172a;
+        }
+
+        .action {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 18px;
+            border-left: 6px solid #f97316;
+            color: #0f172a;
+        }
+
+        .action ul {
+            line-height: 1.9;
+        }
+
+        .highlight {
+            background: #fff7ed;
+            padding: 18px;
+            border-radius: 12px;
+            border: 2px dashed #f97316;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 13px 28px;
+            background: #f97316;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ea580c;
+        }
+            
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 25px 20px;
+            background: #020617;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    
         .hero {
-            height: 600px;
             position: relative;
+            width: 100%;
+            height: 85vh;
             overflow: hidden;
+            background: #000;
         }
 
         .hero-slide {
@@ -137,143 +194,532 @@
             background-size: cover;
             background-position: center;
             opacity: 0;
-            transition: opacity 1s;
+            transition: opacity 1.2s ease-in-out;
         }
 
-        .hero-slide.active { opacity: 1; }
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+        }
 
         .hero-text {
             position: absolute;
-            top: 50%; left: 50%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
             text-align: center;
-            background: rgba(0,0,0,0.6);
-            padding: 40px;
-            border-radius: 20px;
-            width: 70%;
+            color: #ffffff;
+            z-index: 2;
+            max-width: 800px;
+            padding: 25px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
         }
 
-        /* 7. RESPONSIVE - TỐI ƯU CHO ĐIỆN THOẠI (Dưới 768px) */
-        @media (max-width: 768px) {
-            header { padding: 60px 15px; min-height: 200px; }
-            header h1 { font-size: 24px; padding: 10px; }
-            header p { font-size: 18px; }
-
-            nav { gap: 10px; padding: 10px; }
-            nav a { font-size: 14px; }
-
-            .container { margin: 10px; padding: 20px; }
-            
-            p, li { font-size: 18px; } /* Chữ nhỏ hơn một chút trên điện thoại để vừa mắt */
-            
-            section h2 { font-size: 26px; }
-
-            .hero { height: 400px; }
-            .hero-text { width: 90%; padding: 20px; }
-            .hero-text h2 { font-size: 20px; }
-
-            .intro { display: flex; flex-direction: column; }
-            img { max-width: 100%; height: auto !important; }
+        .hero-text h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px black;
+            color: #f97316;
         }
 
-        .action {
+        .hero-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #f8fafc;
+        }
+            
+        /* Fix màu chữ cho các phần phía sau */
+        #phapluat, #tinhhuong, #faq, #checklist, #tongket, #camket {
+            color: #0f172a;
+        }
+
+        #phapluat p, #tinhhuong p, #faq p, #checklist li, #tongket p, #camket li {
+            color: #1e293b;
+        }
+
+        #phapluat .action,
+        #faq .action,
+        #checklist .action,
+        #camket .action {
             background: #f8fafc;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
+        }
+    
+        /* Fix toàn bộ chữ bị chìm trên nền galaxy */
+        .container p,
+        .container li,
+        .container span,
+        .container div {
+            color: #0f172a;
         }
 
-        footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
+        .container h2,
+        .container h3 {
+            color: #020617;
+        }
+
+        .cards p,
+        .cards h3 {
+            color: #020617;
+        }
+
+        .intro p {
+            color: #020617;
+        }
+
+        .action p,
+        .action li {
+            color: #020617;
+        }
+    
+        /* Fix riêng phần 16 bị chìm màu */
+        #phan16,
+        #phan16 p,
+        #phan16 li,
+        #phan16 span,
+        #phan16 div {
+            color: #020617 !important;
+            background: #ffffff;
+        }
+
+        #phan16 h2,
+        #phan16 h3 {
+            color: #020617 !important;
+        }
+    
+        /* Đổi chữ phần 16 sang màu trắng */
+        #tongket16,
+        #tongket16 p,
+        #tongket16 h2 {
+            color: #ffffff !important;
+            background: transparent;
+        }
+    
+        /* Thu nhỏ hình ảnh trong phần 16 */
+        #tongket16 img {
+            max-width: 60%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+        }
+    
+        /* Xóa phần block CSS lỗi ở bản cũ và gộp lại cho chuẩn */
+        #phapluat img,
+        #tinhhuong img,
+        #faq img,
+        #checklist img,
+        #tongket img,
+        #camket img {
+            width: 85%;
+            max-width: 700px;
+            max-height: 240px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto 30px auto; /* Căn giữa */
+            border-radius: 18px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        }
+
+        /* --------------------------------------------------- */
+        /* CSS DÀNH RIÊNG CHO ĐIỆN THOẠI (Dưới 768px)          */
+        /* --------------------------------------------------- */
+        @media (max-width: 768px) {
+            /* Tối ưu Header */
+            header {
+                padding: 40px 10px;
+                background-attachment: scroll; /* Bỏ cố định ảnh trên đt cho mượt */
+            }
+            header h1 {
+                font-size: 26px !important;
+                padding: 10px !important;
+            }
+            header p {
+                font-size: 16px !important;
+                padding: 5px 10px !important;
+            }
+
+            /* Ép lại size chữ nội dung để không bị quá to */
+            p, li, div, span, a {
+                font-size: 16px !important;
+                line-height: 1.5 !important;
+            }
+            h2 {
+                font-size: 22px !important;
+            }
+            h3 {
+                font-size: 18px !important;
+            }
+
+            /* Căn chỉnh lại khoảng cách */
+            .container {
+                padding: 20px 15px;
+                margin: 10px;
+            }
+            .action {
+                padding: 20px 15px;
+            }
+
+            /* Tối ưu ảnh và slider */
+            .hero {
+                height: 50vh;
+            }
+            .hero-text {
+                width: 90%;
+                padding: 15px;
+            }
+            .hero-text h2 {
+                font-size: 24px !important;
+            }
+            
+            /* Tối ưu ảnh ở các phần cuối trang */
+            #phapluat img, #tinhhuong img, #faq img, #checklist img, #tongket img, #camket img {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG</h1>
-    <p>PHÒNG CHỐNG BẠO LỰC MẠNG</p>
+    <h1 style="color: rgb(255, 255, 0); background-color: rgba(255, 0, 0, 0.7); display: inline-block; padding: 10px 20px; border-radius: 8px;">
+        ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG 
+    </h1><br>
+    <p style="color: rgba(255, 0, 0); font-weight: bold; background-color: rgba(248, 248, 255, 0.6); border-radius: 8px; display: inline-block; padding: 5px 20px; text-shadow: -1px -1px 0 #FFFF00, 1px -1px 0 #FFFF00, -1px 1px 0 #FFFF00, 1px 1px 0 #FFFF00;">
+         CHUNG TAY PHÒNG CHỐNG BẠO LỰC KHÔNG GIAN MẠNG  
+    </p>
 </header>
+
+<section class="hero">
+    <div class="hero-slide active" style="background-image:url('2.jpg');">
+        <div class="hero-text">
+            <h2>Thế giới số không phải lúc nào cũng an toàn</h2>
+            <p>Đằng sau màn hình là những câu chuyện chưa được kể</p>
+        </div>
+    </div>
+
+    <div class="hero-slide" style="background-image:url('3.jpg');">
+        <div class="hero-text">
+            <h2>Một cú click có thể làm tổn thương</h2>
+            <p>Hãy suy nghĩ trước khi bình luận</p>
+        </div>
+    </div>
+
+    <div class="hero-slide" style="background-image:url('4.jpg');">
+        <div class="hero-text">
+            <h2>Chúng ta có quyền được an toàn</h2>
+            <p>Không ai đáng bị bắt nạt trên mạng</p>
+        </div>
+    </div>
+
+    <div class="hero-slide" style="background-image:url('5.jpg');">
+        <div class="hero-text">
+            <h2>Hãy cùng thay đổi môi trường mạng</h2>
+            <p>Bắt đầu từ chính bạn – ngay hôm nay</p>
+        </div>
+    </div>
+</section>
+
+<script>
+let slides = document.querySelectorAll('.hero-slide');
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}, 4000);
+</script>
+
+<div class="highlight" style="font-size: 24px; color: #ff5733; font-weight: bold;">
+     "MỖI LỜI NÓI ĐỀU CÓ SỨC NẶNG. BÌNH LUẬN ĐỂ YÊU THƯƠNG, KHÔNG PHẢI LÀM TỔN THƯƠNG." 
+</div>
 
 <nav>
     <a href="#gioithieu">GIỚI THIỆU</a>
+    <a>|</a>
     <a href="#thuctrang">THỰC TRẠNG</a>
-    <a href="#video">TRUYỀN THÔNG</a>
-    <a href="#phapluat">PHÁP LUẬT</a>
+    <a>|</a>
+    <a href="#tacdong">TÁC ĐỘNG</a>
+    <a>|</a>
+    <a href="#hanhdong">HÀNH ĐỘNG</a>
 </nav>
 
 <div class="container">
+
+    <section id="gioithieu">
+        <h2>BẠO LỰC KHÔNG GIAN MẠNG HIỆN NAY</h2>
+        <div class="action">
+            <p style="font-size: 22px; line-height: 1.6;">
+                Trong thời đại công nghệ số, Internet và mạng xã hội đã trở thành một phần
+                không thể thiếu trong cuộc sống của học sinh. Tuy nhiên, bên cạnh những lợi ích,
+                môi trường mạng cũng tiềm ẩn nhiều nguy cơ, đặc biệt là bạo lực không gian mạng.
+            </p>
+            <p style="font-size: 22px; line-height: 1.6;">
+                Nhiều bạn học sinh đã trở thành nạn nhân của những lời nói ác ý, sự xúc phạm,
+                bôi nhọ danh dự trên mạng, dẫn đến tổn thương tinh thần nghiêm trọng.
+            </p>
+            <p style="font-size: 22px; line-height: 1.6;">
+                Vì vậy, việc tuyên truyền và nâng cao nhận thức về phòng chống bạo lực mạng
+                là vô cùng cần thiết trong nhà trường hiện nay.
+            </p>
+        </div>
+    </section>
+
     <section id="gioithieu">
         <h2>1. Bạo lực không gian mạng là gì?</h2>
-        <div class="intro" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+        <div class="intro">
             <div>
-                <p>Bạo lực không gian mạng (Cyberbullying) là hành vi cố ý sử dụng các thiết bị điện tử để làm tổn thương, quấy rối hoặc bôi nhọ người khác.</p>
-                <p>Nó không chỉ dừng lại ở những lời chê bai mà có thể dẫn đến những hệ lụy tâm lý nghiêm trọng.</p>
+                <p style="font-size: 22px; line-height: 1.6;">
+                    Bạo lực không gian mạng là hành vi xúc phạm, đe dọa, bôi nhọ,
+                    lan truyền thông tin sai sự thật trên Internet nhằm gây tổn hại
+                    đến danh dự, tinh thần và cuộc sống của người khác.
+                </p>
+                <p style="font-size: 22px; line-height: 1.6;">
+                    Hiện nay, tình trạng này ngày càng phổ biến, đặc biệt trong học sinh, sinh viên.
+                </p>
             </div>
-            <img src="6.jpg" style="width:100%; border-radius:15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="6.jpg" alt="Internet">
+        </div>
+    </section>
+
+    <section id="bieuhien">
+        <h2>2. Các biểu hiện thường gặp của bạo lực mạng</h2>
+        <div class="action">
+            <ul style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                <li>Chửi bới, xúc phạm danh dự qua tin nhắn, bình luận.</li>
+                <li>Đăng hình ảnh, video riêng tư khi chưa được phép.</li>
+                <li>Lập nhóm để cô lập, nói xấu người khác.</li>
+                <li>Giả mạo tài khoản để lừa đảo, bôi nhọ.</li>
+                <li>Đe dọa, khủng bố tinh thần qua mạng.</li>
+            </ul>
+            <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                Những hành vi này tuy diễn ra trên Internet nhưng hậu quả để lại
+                ngoài đời thực là vô cùng nặng nề.
+            </p>
         </div>
     </section>
 
     <section id="thuctrang">
-        <h2>2. Thực trạng & Hình ảnh</h2>
+        <h2>2. Thực trạng hiện nay</h2>
         <div class="cards">
             <div class="card">
-                <img src="7.jpg" alt="Thực trạng">
-                <h3>Lan truyền tin đồn</h3>
-                <p>Sử dụng mạng xã hội để tung tin sai lệch về đời tư cá nhân.</p>
+                <img src="7.jpg" alt="Bình luận xấu">
+                <h3>Bình luận tiêu cực</h3>
+                <p>Nhiều người bị xúc phạm, chửi bới trên mạng xã hội.</p>
             </div>
+
             <div class="card">
-                <img src="8.jpg" alt="Hành động">
-                <h3>Công kích tập thể</h3>
-                <p>Lập hội nhóm để tẩy chay hoặc lăng mạ một cá nhân cụ thể.</p>
+                <img src="8.jpg" alt="Tin giả">
+                <h3>Tin giả</h3>
+                <p>Thông tin sai lệch được lan truyền nhanh chóng.</p>
+            </div>
+
+            <div class="card">
+                <img src="9.jpg" alt="Áp lực">
+                <h3>Áp lực tâm lý</h3>
+                <p>Nạn nhân dễ rơi vào stress, lo âu, trầm cảm.</p>
             </div>
         </div>
     </section>
 
-    <section id="video">
-        <h2>3. Video Truyền Thông</h2>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px;">
-            <iframe 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                src="https://www.youtube.com/embed/ksWM9UDA1hk" 
-                allowfullscreen>
-            </iframe>
+    <section id="hauqua">
+        <h2>3. Hậu quả lâu dài của bạo lực mạng</h2>
+        <div class="intro">
+            <div>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    Bạo lực không gian mạng không chỉ gây tổn thương nhất thời
+                    mà còn để lại hậu quả lâu dài đối với nạn nhân.
+                </p>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    Nhiều bạn học sinh trở nên tự ti, mất niềm tin vào bản thân,
+                    ngại giao tiếp và thu mình lại với xã hội.
+                </p>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    Trong những trường hợp nghiêm trọng, nạn nhân có thể rơi vào
+                    trạng thái trầm cảm, suy nghĩ tiêu cực và thậm chí có hành vi nguy hiểm.
+                </p>
+            </div>
+            <img src="10.jpg" alt="Hậu quả">
         </div>
     </section>
 
-    <section id="phapluat">
-        <h2>4. Quy định Pháp luật</h2>
+    <section id="tacdong">
+        <h2>3. Tác động của bạo lực mạng</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="11.jpg" alt="Buồn bã">
+                <h3>Tinh thần</h3>
+                <p>Gây tổn thương tâm lý nghiêm trọng cho nạn nhân.</p>
+            </div>
+
+            <div class="card">
+                <img src="12.jpg" alt="Học tập">
+                <h3>Học tập</h3>
+                <p>Ảnh hưởng đến kết quả học tập và sinh hoạt.</p>
+            </div>
+
+            <div class="card">
+                <img src="13.jpg" alt="Xã hội">
+                <h3>Xã hội</h3>
+                <p>Làm suy giảm niềm tin và sự đoàn kết.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hanhdong">
+        <h2>4. Chúng ta cần làm gì?</h2>
         <div class="action">
-            <p>Tại Việt Nam, Luật An ninh mạng và các Nghị định liên quan đã quy định rõ các hình thức xử phạt cho hành vi xúc phạm danh dự người khác trên mạng.</p>
-            <ul>
-                <li>Phạt tiền từ 10 - 20 triệu đồng cho hành vi cung cấp thông tin sai sự thật.</li>
-                <li>Có thể bị truy cứu trách nhiệm hình sự về tội làm nhục hoặc vu khống người khác.</li>
+            <ul style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                <li> Không tham gia bình luận tiêu cực.</li>
+                <li> Tôn trọng và lắng nghe người khác.</li>
+                <li> Báo cáo nội dung xấu độc.</li>
+                <li> Ủng hộ và bảo vệ nạn nhân.</li>
+                <li> Sử dụng mạng xã hội văn minh.</li>
             </ul>
+
+            <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                Mỗi hành động nhỏ của bạn hôm nay sẽ tạo nên một môi trường mạng an toàn cho ngày mai.
+            </p>
+
+            <a href="#kynang" class="btn">Bắt đầu thay đổi</a>
         </div>
     </section>
-</div>
 
-<footer>
-    <p><b>HÃY SỬ DỤNG MẠNG XÃ HỘI MỘT CÁCH VĂN MINH</b></p>
-    <p>© 2026 Dự án Tuyên truyền Cộng đồng</p>
-</footer>
+    <section id="cauthuc">
+        <h2>5. Câu chuyện thực tế</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="14.jpg" alt="Nạn nhân">
+                <h3>Im lặng vì sợ hãi</h3>
+                <p>Nhiều học sinh bị xúc phạm trên mạng nhưng không dám nói ra vì lo bị chê cười.</p>
+            </div>
 
-<script>
-    // Script đơn giản để tạo slider nếu bạn có nhiều ảnh hero
-    let slides = document.querySelectorAll('.hero-slide');
-    if(slides.length > 0) {
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 5000);
-    }
-</script>
+            <div class="card">
+                <img src="15.jpg" alt="Chia sẻ">
+                <h3>Chia sẻ để được giúp đỡ</h3>
+                <p>Khi dám lên tiếng, nạn nhân sẽ nhận được sự hỗ trợ từ bạn bè và thầy cô.</p>
+            </div>
 
-</body>
-</html>
+            <div class="card">
+                <img src="16.jpg" alt="Đoàn kết">
+                <h3>Sức mạnh tập thể</h3>
+                <p>Sự đoàn kết giúp đẩy lùi các hành vi bạo lực trên mạng.</p>
+            </div>
+        </div>
+        <div class="video-container" style="text-align: center; margin: 30px auto; max-width: 850px;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/ksWM9UDA1hk?rel=0&showinfo=0" 
+                    title="Phòng chống bạo lực mạng" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="margin-top: 15px; font-style: italic; color: #666; font-size: 16px;">
+                💡 Nếu video không hiển thị, hãy thử làm mới (F5) trang web.
+            </p>
+        </div>
+    </section>
+
+    <section id="kynang">
+        <h2>6. Kỹ năng sử dụng mạng an toàn</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="17.jpg" alt="Bảo mật">
+                <h3>Bảo mật thông tin</h3>
+                <p>Không chia sẻ mật khẩu, số điện thoại, địa chỉ cá nhân.</p>
+            </div>
+
+            <div class="card">
+                <img src="18.jpg" alt="Kiểm soát">
+                <h3>Kiểm soát cảm xúc</h3>
+                <p>Không phản ứng nóng giận trước các bình luận tiêu cực.</p>
+            </div>
+
+            <div class="card">
+                <img src="19.jpg" alt="Báo cáo">
+                <h3>Báo cáo vi phạm</h3>
+                <p>Sử dụng chức năng report khi gặp nội dung xấu.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="thongdiep">
+        <h2>7. Thông điệp gửi tới cộng đồng</h2>
+        <div class="intro">
+            <img src="20.jpg" alt="Thông điệp">
+            <div>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    Mạng xã hội sẽ trở nên tốt đẹp hơn khi mỗi người biết tôn trọng,
+                    yêu thương và chia sẻ tích cực.
+                </p>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    Hãy nhớ rằng: Im lặng trước bạo lực là tiếp tay cho bạo lực.
+                    Hãy lên tiếng để bảo vệ chính mình và người khác.
+                </p>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;"><b>Đừng im lặng – Hãy hành động vì một môi trường mạng văn minh!</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solieu">
+        <h2>8. Một số số liệu đáng chú ý</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="21.jpg" alt="Thống kê">
+                <h3>Học sinh bị ảnh hưởng</h3>
+                <p>Hơn 60% học sinh từng thấy hoặc trải qua bạo lực mạng.</p>
+            </div>
+
+            <div class="card">
+                <img src="22.jpg" alt="Tâm lý">
+                <h3>Ảnh hưởng tâm lý</h3>
+                <p>Gần 40% nạn nhân có dấu hiệu stress kéo dài.</p>
+            </div>
+
+            <div class="card">
+                <img src="23.jpg" alt="Học tập">
+                <h3>Sa sút học tập</h3>
+                <p>Nhiều bạn học sinh mất tập trung vì áp lực từ mạng xã hội.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vaitro">
+        <h2>9. Vai trò của gia đình và nhà trường</h2>
+        <div class="intro">
+            <div>
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;"><b>Gia đình:</b></p>
+                <ul style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    <li>Quan tâm, lắng nghe con em.</li>
+                    <li>Hướng dẫn sử dụng Internet an toàn.</li>
+                    <li>Không la mắng khi con gặp sự cố.</li>
+                </ul>
+
+                <p style="font-size: 22px; line-height: 1.6; color: #1e293b;"><b>Nhà trường:</b></p>
+                <ul style="font-size: 22px; line-height: 1.6; color: #1e293b;">
+                    <li>Tuyên truyền về an toàn mạng.</li>
+                    <li>Tổ chức chuyên đề, ngoại khóa.</li>
+                    <li>Bảo vệ học sinh khi bị bắt nạt.</li>
+                </ul>
+            </div>
+
+            <img src="24.jpg" alt="Nhà trường">
+        </div>
+    </section>
+
+    <section id="thuyettrinh">
+        <h2>10.
