@@ -12,19 +12,30 @@
             background-size: cover;
             color: #0f172a;
         }
-
         header {
-            background: url('0.png') no-repeat left center; /* Đã bỏ 'fixed' */
-            background-size: cover; /* Giúp ảnh luôn phủ kín và không bị co méo */
-            color: #0f172a;
-            text-align: center;
-            padding: 70px 20px;
-            min-height: 250px; /* Đảm bảo có đủ không gian để hiển thị bàn tay */
+            background: url('0.png') no-repeat center center;
+            background-size: cover;
+            min-height: 250px;
+    
+            /* Gộp chữ vào giữa ảnh */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
+
         header h1 {
             font-size: 44px;
-            margin-bottom: 12px;
+            margin: 0;
             letter-spacing: 1px;
+    
+            /* Style cho khung đỏ của bạn */
+            background-color: rgba(255, 0, 0, 0.7);
+            color: rgb(255, 255, 0);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: center;
         }
 
         header p {
@@ -386,15 +397,15 @@
                 max-width: 100%;
                 height: auto;
             }
-        /* Đoạn này thay thế cho cả 2 đoạn cũ trong @media */
-        header h1 {
-            font-size: 5vw !important; 
-            padding: 10px !important;
-            white-space: nowrap;       
-            display: inline-block !important;
-            max-width: 100% !important;
-            box-sizing: border-box;    
-            margin: 0 !important;      /* Thêm dòng này để loại bỏ khoảng cách thừa trên mobile */
+            header {
+                min-height: 200px !important; /* Giảm chiều cao cho gọn trên mobile */
+            }
+
+            header h1 {
+                font-size: 5vw !important;
+                padding: 8px 15px !important;
+                 white-space: nowrap;
+                margin: 0 !important;
             }
         }
     </style>
