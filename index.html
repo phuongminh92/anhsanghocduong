@@ -14,16 +14,13 @@
         }
 
         header {
-            background: url('0.png') no-repeat center fixed;
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-attachment: fixed; /* Giữ ảnh đứng yên khi cuộn */
+            background: url('0.png') no-repeat center center; /* Đã bỏ 'fixed' */
+            background-size: cover; /* Giúp ảnh luôn phủ kín và không bị co méo */
             color: #0f172a;
             text-align: center;
             padding: 70px 20px;
+            min-height: 250px; /* Đảm bảo có đủ không gian để hiển thị bàn tay */
         }
-
         header h1 {
             font-size: 44px;
             margin-bottom: 12px;
