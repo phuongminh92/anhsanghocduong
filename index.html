@@ -392,6 +392,13 @@
                 max-width: 100%;
                 height: auto;
             }
+        /* Fix tiêu đề chính trên mobile để không bị xuống dòng */
+            h1 {
+                font-size: 20px !important; /* Thu nhỏ hơn nữa để vừa 1 dòng */
+                padding: 10px !important;
+                display: block !important;
+                white-space: nowrap;        /* Ép không xuống dòng */
+            }
         }
     </style>
 </head>
