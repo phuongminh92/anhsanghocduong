@@ -348,13 +348,7 @@
             /* Giảm padding của container để tận dụng không gian màn hình nhỏ */
             .container {
                 padding: 20px 15px;
-            }
-
-            /* Thu nhỏ tiêu đề và chữ trên Header */
-            header h1 {
-                font-size: 26px !important;
-                padding: 8px 15px !important;
-            }
+            } 
             
             header p {
                 font-size: 16px !important;
@@ -392,14 +386,15 @@
                 max-width: 100%;
                 height: auto;
             }
-        /* Điều chỉnh tiêu đề H1 trên mobile */
+        /* Đoạn này thay thế cho cả 2 đoạn cũ trong @media */
         header h1 {
-            font-size: 5vw !important; /* Chữ tự co giãn theo chiều ngang màn hình */
+            font-size: 5vw !important; 
             padding: 10px !important;
-            white-space: nowrap;       /* Luôn giữ trên 1 hàng */
+            white-space: nowrap;       
             display: inline-block !important;
             max-width: 100% !important;
-            box-sizing: border-box;    /* Quan trọng: Giúp padding không làm tràn khung */
+            box-sizing: border-box;    
+            margin: 0 !important;      /* Thêm dòng này để loại bỏ khoảng cách thừa trên mobile */
             }
         }
     </style>
