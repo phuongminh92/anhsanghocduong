@@ -428,11 +428,15 @@
             }
 
             /* Điều chỉnh tiêu đề phụ (nếu có) */
+            /* Luôn giữ đầy đủ thế này để an toàn nhất cho website */
             .hero-header .subtitle {
                 font-size: 4vw !important;
-                text-align: center !important; /* Ép chữ luôn căn giữa */
+                text-align: center !important; 
                 padding: 4px 10px !important;
-                margin: 0 auto !important;     /* Căn giữa khối */
+                margin: 0 auto !important;     
+                white-space: normal !important; 
+                line-height: 1.4 !important;    
+                display: block !important;      
             }
         }
     </style>
@@ -441,7 +445,7 @@
 
 <header class="hero-header">
     <h1>ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG</h1>
-    <p class="subtitle">CHUNG TAY PHÒNG CHỐNG BẠO LỰC KHÔNG GIAN MẠNG</p>
+    <p class="subtitle">CHUNG TAY PHÒNG CHỐNG<br>BẠO LỰC KHÔNG GIAN MẠNG</p>
 </header>
 
 <section class="hero">
