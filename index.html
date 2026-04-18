@@ -409,15 +409,25 @@
                 max-width: 100%;
                 height: auto;
             }
-            header {
-                min-height: 200px !important; /* Giảm chiều cao cho gọn trên mobile */
+        
+            /* Điều chỉnh khung header */
+            .hero-header {
+                min-height: 200px !important;       /* Chiều cao khung trên mobile */
+                background-position: left 30% !important; /* Dịch lên 30% để cắt bớt không gian trống phía trên */
             }
 
-            header h1 {
+               /* Điều chỉnh chữ tiêu đề */
+            .hero-header h1 {
                 font-size: 5vw !important;
                 padding: 8px 15px !important;
-                 white-space: nowrap;
+                white-space: nowrap;
                 margin: 0 !important;
+            }
+
+            /* Điều chỉnh tiêu đề phụ (nếu có) */
+            .hero-header .subtitle {
+                font-size: 3.5vw !important;
+                padding: 4px 10px !important;
             }
         }
     </style>
