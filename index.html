@@ -38,17 +38,30 @@
             background: #0f172a;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Cho phép rớt dòng trên màn hình nhỏ */
-            gap: 15px 30px;
+            align-items: center;
+            white-space: nowrap;     /* Ép nằm trên 1 dòng */
+            overflow-x: auto;        /* Cho phép cuộn ngang trên mobile */
             padding: 14px 20px;
+            gap: 15px;               /* Khoảng cách giữa các mục */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Ẩn thanh cuộn trên các trình duyệt */
+        nav::-webkit-scrollbar {
+            display: none;
         }
 
         nav a {
             color: #f8fafc;
             text-decoration: none;
             font-weight: bold;
+            flex-shrink: 0;          /* Không cho các mục bị co nhỏ lại */
         }
-
+        nav a:not(:last-child)::after {
+            content: "|";
+            margin-left: 15px; /* Khoảng cách từ chữ tới dấu gạch */
+            color: #f97316;     /* Màu cam cho nổi bật */
+        }
         nav a:hover {
             color: #f97316;
         }
@@ -452,14 +465,11 @@ setInterval(() => {
 
 <nav>
     <a href="#gioithieu">GIỚI THIỆU</a>
-    <a>|</a>
     <a href="#thuctrang">THỰC TRẠNG</a>
-    <a>|</a>
     <a href="#tacdong">TÁC ĐỘNG</a>
-    <a>|</a>
     <a href="#hanhdong">HÀNH ĐỘNG</a>
-    </nav>
-
+</nav>
+    
 <div class="container">
 
     <section id="gioithieu">
