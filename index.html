@@ -392,12 +392,15 @@
                 max-width: 100%;
                 height: auto;
             }
-        /* Fix tiêu đề chính trên mobile để không bị xuống dòng */
+        /* Fix tiêu đề và khung chứa nó trên mobile */
             h1 {
-                font-size: 20px !important; /* Thu nhỏ hơn nữa để vừa 1 dòng */
-                padding: 10px !important;
-                display: block !important;
-                white-space: nowrap;        /* Ép không xuống dòng */
+                font-size: 18px !important;    /* Giảm font để đủ chỗ */
+                padding: 10px 5px !important;  /* Giảm padding để tiết kiệm không gian */
+                display: inline-block !important; 
+                white-space: nowrap;          /* Ép 1 hàng */
+                max-width: 95vw;              /* Khung không được quá chiều ngang màn hình */
+                overflow: hidden;             /* Ẩn phần dư nếu có */
+                text-overflow: ellipsis;      /* Nếu quá dài, hiện dấu ... thay vì tràn */
             }
         }
     </style>
