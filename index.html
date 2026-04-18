@@ -12,31 +12,43 @@
             background-size: cover;
             color: #0f172a;
         }
-        header {
-            background: url('0.png') no-repeat center center;
-            background-size: cover;
-            min-height: 250px;
-    
-            /* Gộp chữ vào giữa ảnh */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+        /* Khung cha chứa ảnh và chữ */
+.hero-header {
+    background: url('0.png') no-repeat center center;
+    background-size: cover;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;    /* Xếp chữ trên dưới */
+    justify-content: center;   /* Căn giữa dọc */
+    align-items: center;       /* Căn giữa ngang */
+    padding: 20px;
+    gap: 15px;                 /* Khoảng cách giữa 2 khung chữ */
+}
 
-        header h1 {
-            font-size: 44px;
-            margin: 0;
-            letter-spacing: 1px;
-    
-            /* Style cho khung đỏ của bạn */
-            background-color: rgba(255, 0, 0, 0.7);
-            color: rgb(255, 255, 0);
-            padding: 10px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            text-align: center;
-        }
+/* Định dạng tiêu đề H1 */
+.hero-header h1 {
+    font-size: 48px;
+    margin: 0;
+    color: rgb(255, 255, 0);
+    background-color: rgba(255, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Định dạng tiêu đề phụ (thẻ p) */
+.hero-header .subtitle {
+    font-size: 30px;
+    margin: 0;
+    color: rgba(255, 0, 0);
+    font-weight: bold;
+    background-color: rgba(248, 248, 255, 0.6);
+    border-radius: 8px;
+    padding: 5px 20px;
+    display: inline-block;
+    text-shadow: -1px -1px 0 #FFFF00, 1px -1px 0 #FFFF00, -1px 1px 0 #FFFF00, 1px 1px 0 #FFFF00;
+}
 
         header p {
             font-size: 19px;
@@ -412,22 +424,9 @@
 </head>
 <body>
 
-<header style="text-align: center; padding: 3px; background-color: WHITE;">
-    <h1 style="font-size: 48px; color: rgb(255, 255, 0); margin-bottom: 10px; 
-               background-color: rgba(255, 0, 0, 0.7); display: inline-block; padding: 10px 20px; border-radius: 8px;">
-        ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG 
-    </h1>
-    <p style="font-size: 30px; 
-    color: rgba(255, 0, 0); 
-    font-weight: bold; 
-    background-color: 
-    rgba(248, 248, 255, 0.6); 
-    border-radius: 8px;
-    display: inline-block; 
-        padding: 5px 20px;
-    text-shadow: -1px -1px 0 #FFFF00, 1px -1px 0 #FFFF00, -1px 1px 0 #FFFF00, 1px 1px 0 #FFFF00;">
-         CHUNG TAY PHÒNG CHỐNG BẠO LỰC KHÔNG GIAN MẠNG  
-    </p>
+<header class="hero-header">
+    <h1>ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG</h1>
+    <p class="subtitle">CHUNG TAY PHÒNG CHỐNG BẠO LỰC KHÔNG GIAN MẠNG</p>
 </header>
 
 <section class="hero">
