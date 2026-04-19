@@ -366,6 +366,9 @@
             box-shadow: 0 6px 16px rgba(0,0,0,0.25);
         }
 
+        .subtitle .break-line {
+            display: inline; 
+        }
         /* --- PHẦN BỔ SUNG ĐỂ TỐI ƯU CHO ĐIỆN THOẠI (MOBILE RESPONSIVE) --- */
         @media (max-width: 768px) {
             /* Giảm padding của container để tận dụng không gian màn hình nhỏ */
@@ -438,6 +441,9 @@
                 line-height: 1.4 !important;    
                 display: block !important;      
             }
+            .hero-header .subtitle .break-line {
+                display: block !important;
+            }
         }
     </style>
 </head>
@@ -445,7 +451,7 @@
 
 <header class="hero-header">
     <h1>ĐỪNG IM LẶNG - HÃY HÀNH ĐỘNG</h1>
-    <p class="subtitle">CHUNG TAY PHÒNG CHỐNG<br>BẠO LỰC KHÔNG GIAN MẠNG</p>
+    <p class="subtitle">CHUNG TAY PHÒNG CHỐNG <span class="break-line">BẠO LỰC KHÔNG GIAN MẠNG</span></p>
 </header>
 
 <section class="hero">
