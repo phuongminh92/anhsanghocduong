@@ -105,11 +105,11 @@
             padding: 40px 25px;
     
             /* Sửa thành màu trắng mờ 50% */
-            background: rgba(255, 255, 255, 0.9) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
     
             /* Tạo hiệu ứng làm mờ lớp phía sau */
             backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(10px); /* Dành cho Safari */
+            -webkit-backdrop-filter: blur(3px); /* Dành cho Safari */
     
             border-radius: 22px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Giảm độ đậm của bóng để trông nhẹ nhàng hơn */
@@ -394,8 +394,10 @@
             /* Giảm padding của container để tận dụng không gian màn hình nhỏ */
             .container {
                 padding: 20px 15px;
-            } 
-            
+                background: rgba(255, 255, 255, 0.3) !important;
+                backdrop-filter: blur(5px) !important;
+                -webkit-backdrop-filter: blur(5px) !important;
+            }
             header p {
                 font-size: 16px !important;
                 padding: 5px 10px !important;
