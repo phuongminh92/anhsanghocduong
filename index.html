@@ -103,11 +103,18 @@
             max-width: 1150px;
             margin: auto;
             padding: 40px 25px;
-            background: linear-gradient(180deg, #ffffff, #f1f5f9);
+    
+            /* Sửa thành màu trắng mờ 50% */
+            background: rgba(255, 255, 255, 0.5) !important;
+    
+            /* Tạo hiệu ứng làm mờ lớp phía sau */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Dành cho Safari */
+    
             border-radius: 22px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Giảm độ đậm của bóng để trông nhẹ nhàng hơn */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Thêm viền trắng mờ để làm nổi bật khối */
         }
-
         section {
             margin-bottom: 60px;
             padding-bottom: 15px;
